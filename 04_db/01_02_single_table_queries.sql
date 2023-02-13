@@ -1,126 +1,182 @@
+-- 03. Filtering data
 SELECT DISTINCT
-	lastName
+  lastName
 FROM
-	employees
+  employees
 ORDER BY
-	lastName ASC;
-    
-    
-SELECT
-	lastName, firstName, officeCode
-FROM
-	employees
-WHERE
-	officeCode = 1;
-
+  lastName;
 
 SELECT
-	lastName, firstName, jobTitle
+  lastName
 FROM
-	employees
-WHERE
-	jobTitle != 'Sales Rep';
-
-
-SELECT
-	lastName, firstName, officeCode, jobTitle
-FROM
-	employees
-WHERE
-	officeCode >= 3 
-    AND jobTitle = 'Sales Rep';
-
-
-SELECT
-	lastName, firstName, officeCode, jobTitle
-FROM
-	employees
-WHERE
-	officeCode < 5
-	OR jobTitle != 'Sales Rep';
-    
-
-SELECT 
-	lastName, firstName, officeCode
-FROM 
-	employees
-WHERE
-	officeCode BETWEEN 1 AND 4;
--- 	officeCode >= 1
---     AND officeCode <= 4;
-
-
-SELECT 
-	lastName, firstName, officeCode
-FROM 
-	employees
-WHERE
-	officeCode BETWEEN 1 AND 4
+  employees
 ORDER BY
-	officeCode;
-    
+  lastName;
 
-SELECT 
-	lastName, firstName, officeCode
-FROM 
-	employees
-WHERE
-	officeCode IN (1, 3, 4);
--- 	officeCode = 1
---     OR officeCode = 3
---     OR officeCode = 4;
-
-
-SELECT 
-	lastName, firstName, officeCode
-FROM 
-	employees
-WHERE
-	officeCode NOT IN (1, 3, 4);
-    
-
-SELECT 
-	lastName, firstName
-FROM 
-	employees
-WHERE
-	lastName LIKE '%son';
-    
-
-SELECT 
-	lastName, firstName
-FROM 
-	employees
-WHERE
-	firstName LIKE '___y';
-    
-
-SELECT
-	firstName, officeCode
+SELECT DISTINCT
+  lastName
 FROM
-	employees
-ORDER BY 
-	officeCode DESC
-LIMIT 3, 5;
-
-
-SELECT
-	country, AVG(creditLimit) AS avgOfCreditLimit
-FROM
-	customers
-GROUP BY
-	country
+  employees
 ORDER BY
-	avgOfCreditLimit DESC;
-    
+  lastName;
 
-SELECT
-	country, AVG(creditLimit)
+SELECT 
+  lastName, firstName, officeCode
 FROM
-	customers
+  employees
+WHERE
+  officeCode = 1;
+
+SELECT 
+  lastName, firstName, jobTitle
+FROM
+  employees
+WHERE
+  jobTitle != 'Sales Rep';
+
+SELECT 
+  lastName, firstName, officeCode, jobTitle
+FROM
+  employees
+WHERE
+  officeCode >= 1
+  AND jobTitle = 'Sales Rep';
+
+SELECT 
+  lastName, firstName, officeCode, jobTitle
+FROM
+  employees
+WHERE
+  officeCode < 5
+  OR jobTitle != 'Sales Rep';
+
+SELECT 
+  lastName, firstName, officeCode
+FROM
+  employees
+WHERE
+  officeCode BETWEEN 1 AND 4;
 -- WHERE
--- 	AVG(creditLimit) > 80000
+--   officeCode >= 1
+--   AND officeCode <= 4;
+
+SELECT 
+  lastName, firstName, officeCode
+FROM
+  employees
+WHERE
+  officeCode BETWEEN 1 AND 4
+ORDER BY officeCode;
+
+SELECT 
+  lastName, firstName, officeCode
+FROM
+  employees
+WHERE
+  officeCode IN (1, 3, 4);
+-- WHERE
+--   officeCode = 1
+--   OR officeCode = 3
+--   OR officeCode = 4;
+
+SELECT 
+  lastName, firstName, officeCode
+FROM
+  employees
+WHERE
+  officeCode NOT IN (1, 3, 4);
+
+SELECT 
+  lastName, firstName
+FROM
+  employees
+WHERE
+  lastName LIKE '%son';
+
+SELECT 
+  lastName, firstName
+FROM
+  employees
+WHERE
+  firstName LIKE '___y';
+
+SELECT 
+  contactFirstName, creditLimit
+FROM
+  customers
+ORDER BY creditLimit DESC
+LIMIT 7;
+
+
+SELECT 
+  contactFirstName, creditLimit
+FROM
+  customers
+ORDER BY 
+  creditLimit DESC
+LIMIT 3, 4;
+-- LIMIT 5 OFFSET 3;
+
+
+
+-- 04. Grouping data
+SELECT 
+  c1, c2,..., cn, aggregate_function(ci)
+FROM
+  table_name
+GROUP BY 
+  c1, c2, ..., cn;
+
+SELECT
+  jobTitle
+FROM
+  employees
 GROUP BY
-	country
+  jobTitle;
+
+SELECT 
+  jobTitle, COUNT(*)
+FROM
+  employees
+GROUP BY 
+  jobTitle;
+
+SELECT
+  country,
+  AVG(creditLimit)
+FROM
+  customers
+GROUP BY
+  country
+ORDER BY
+  AVG(creditLimit) DESC;
+
+SELECT
+  country,
+  AVG(creditLimit) AS avgOfCreditLimit
+FROM
+  customers
+GROUP BY
+  country
+ORDER BY
+  avgOfCreditLimit DESC;
+
+SELECT
+  country,
+  AVG(creditLimit)
+FROM
+  customers
+WHERE 
+  AVG(creditLimit) > 80000
+GROUP BY
+  country;
+
+SELECT
+  country,
+  AVG(creditLimit)
+FROM
+  customers
+GROUP BY
+  country
 HAVING
-	AVG(creditLimit) > 80000;
+  AVG(creditLimit) > 80000;

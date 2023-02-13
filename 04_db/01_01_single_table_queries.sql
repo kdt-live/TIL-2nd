@@ -58,5 +58,3 @@ FROM
 	orderdetails
 ORDER BY
 	totalsales DESC;
-    
-    

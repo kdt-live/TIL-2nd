@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a,
+    span,
+    img {
+      border: 1px solid red;
+      padding-top: 50px;
+      padding-right: 50px;
+    }
+
+    h1,
+    p,
+    div {
+      border: 1px solid blue;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Normal Flow</h1>
+  <p>p태그도 대표적인 block 요소입니다.</p>
+  <div>
+    <p>block요소는 기본적으로 부모 요소 너비의 100%를 차지하며, 자식 콘텐츠의 최대 높이를 취한다.</p>
+    <p>block 요소의 총 너비와 총 높이는 content + padding + border(상하/좌우 두께)</p>
+  </div>
+  <p>block 요소는 서로 margins로 구분된다.</p>
+  <p>
+    inline 요소는 <span>이 span 태그처럼</span> 자기 콘텐츠의 너비와 높이만 차지한다.
+    그리고 inline 요소는 <a href="#">width 나 height 속성을 지정할 수 없다.</a>
+  </p>
+  <p>
+    이미지 <img src="#" alt="#"> 또한 inline 요소 중 하나이다.
+    단, 이미지는 다른 inline 요소들과 달리 width나 height 값을 지정할 수 있다.
+  </p>
+  <p>
+    만약 inline 요소의 크기를 제어하려면 block으로 변경해버리거나
+    inline-block 요소로 설정해주어야 한다.
+  </p>
+
+</body>
+</html>

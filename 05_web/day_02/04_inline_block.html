@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      margin: 20px;
+      padding: 20px;
+      width: 80px;
+      height: 50px;
+      background-color: lightblue;
+      border: 2px solid blue;
+      display: inline-block;
+    }
+
+    ul > li {
+      background-color: crimson;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. 이제 다른 요소를 밀어낼 수 있는 span -->
+  <p>Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Animi iusto enim officia exercitationem dolore dolorum voluptatum modi sed sapiente eaque, quasi velit, dolores, tempora illum odio necessitatibus. Fugit, cumque eligendi!</p>
+  
+  <!-- 2. 리스트 요소를 가로로 정렬 -->
+  <ul>
+    <li><a href="#">link</a></li>
+    <li><a href="#">link</a></li>
+    <li><a href="#">link</a></li>
+  </ul>
+
+  <!-- 3. div 요소를 가로로 정렬 -->
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

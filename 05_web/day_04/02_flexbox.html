@@ -10,6 +10,28 @@
     .container {
       height: 500px;
       border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      /* flex-direction: column; */
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column-reverse; */
+
+      /* flex-wrap: nowrap; */
+      /* flex-wrap: wrap; */
+
+      /* 주축 정렬 */
+      /* justify-content: flex-start; */
+      /* justify-content: center; */
+      /* justify-content: flex-end; */
+
+      /* 교차축 정렬 */
+      /* align-content: flex-start; */
+      /* align-content: center; */
+      /* align-content: flex-end; */
+
+      /* align-items: flex-end; */
+      /* align-items: center; */
+      /* align-items: flex-end; */
     }
 
     .post {
@@ -19,9 +41,13 @@
       padding: 0.5rem;
     }
 
-    .item1 {}
+    .item1 {
+      /* align-self: center; */
+    }
 
-    .item2 {}
+    .item2 {
+      /* align-self: flex-end; */
+    }
 
   </style>
 </head>

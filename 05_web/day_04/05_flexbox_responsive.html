@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      width: 80%;
+      border: 1px solid black;
+      /* 1 */
+      display: flex;
+      /* 2 */
+      flex-wrap: wrap;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .thumbnail {
+      /* 3 */
+      flex-basis: 700px;
+      /* 4 */
+      flex-grow: 1;
+      /* flex: 1 700px; */
+    }
+
+    .content {
+      /* 3 */
+      flex-basis: 350px;
+      /* 4 */
+      flex-grow: 1;
+      /* flex: 1 350px; */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img class="thumbnail" src="images/sample.jpg" alt="sample">
+    <div class="content">
+      <h2>Heading</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis minus sed expedita ut nihil tempora
+        neque autem odio eos, repudiandae blanditiis, molestiae consequatur. Adipisci illo dolor repellat alias
+        maiores.
+        Aut?</p>
+    </div>
+  </div>
+</body>
+
+</html>

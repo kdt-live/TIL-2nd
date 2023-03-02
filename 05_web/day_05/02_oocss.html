@@ -7,15 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* 기본 카드 구조 */
+    .card {
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+
+    /* 카드 제목 */
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* 카드 내용 */
+    .card-description {
+      font-size: 0.7rem;
+    }
+
+    /* 기본 버튼 구조 */
+    .btn {
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .bg-red {
+      background-color: crimson;
+    }
+
+    .bg-blue {
+      background-color: lightblue;
+    }
+
+
   </style>
 </head>
 
 <body>
-  <div class="#">
-    <p class="#">Card Title</p>
-    <p class="#">This is a card description.</p>
-    <button class="#e">Learn More</button>
-    <button class="#">Learn More</button>
+  <div class="card">
+    <p class="card-title">Card Title</p>
+    <p class="card-description">This is a card description.</p>
+    <button class="btn bg-red">Learn More</button>
+    <button class="btn bg-blue">Learn More</button>
   </div>
 </body>
 

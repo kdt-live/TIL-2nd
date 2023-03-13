@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title heading">DOM 선택</h1>
+  <a href="https://www.google.com/">google</a>
+  <p class="text">content1</p>
+  <p class="text">content2</p>
+  <p class="text">content3</p>
+  <ul>
+    <li>list1</li>
+    <li>list2</li>
+  </ul>
+
+  <script>
+    // 속성 조작
+    // 클래스 속성 조작
+    console.log(document.querySelector('h1'))
+    const h1Tag = document.querySelector('h1')
+    console.log(h1Tag.classList)
+
+    h1Tag.classList.add('test')
+    console.log(h1Tag.classList)
+
+    h1Tag.classList.remove('test')
+    console.log(h1Tag.classList)
+
+    // 일반 속성 조작
+    const aTag = document.querySelector('a')
+    console.log(aTag)
+    console.log(aTag.getAttribute('href'))
+
+    aTag.setAttribute('href', 'https://www.naver.com/')
+    console.log(aTag.getAttribute('href'))
+
+    aTag.removeAttribute('href')
+    console.log(aTag.getAttribute('href'))
+
+    // 클래스도 일반 속성 방식으로 조작 가능
+    const pTag = document.querySelector('.text')   
+    console.log(pTag.getAttribute('class')) 
+  </script>
+</body>
+</html>

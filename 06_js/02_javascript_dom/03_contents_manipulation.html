@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title heading">DOM 선택</h1>
+  <a href="https://www.google.com/">google</a>
+  <p class="text">content1</p>
+  <p class="text">content2</p>
+  <p class="text">content3</p>
+  <ul>
+    <li>list1</li>
+    <li>list2</li>
+  </ul>
+
+  <script>
+    // h1 tag 선택
+    const h1Tag = document.querySelector('.heading')
+    console.log(h1Tag.textContent)
+
+    h1Tag.textContent = '콘텐츠 수정'
+    console.log(h1Tag.textContent)
+  </script>
+</body>
+</html>

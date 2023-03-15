@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const fruits = ['apple', 'banana', 'coconut']
+
+    console.log(fruits[0])
+    console.log(fruits[1])
+    console.log(fruits[2])
+
+    console.log(fruits.length)
+
+    // 수정
+    fruits[1] = 'kiwi'
+    console.log(fruits) // ['apple', 'kiwi', 'coconut']
+
+    // 배열과 반복
+    // for
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i])
+    }
+
+    // for...of
+    for (const fruit of fruits) {
+      console.log(fruit)
+    }
+
+  </script>
+</body>
+
+</html>

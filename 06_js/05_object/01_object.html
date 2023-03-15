@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const user = {
+      name: 'Sophia',
+      age: 30,
+      'key with space': true,
+    }
+
+    // 조회
+    console.log(user.age) // 30
+    console.log(user['key with space']) // true
+
+    // 추가
+    user.address = 'korea'
+    console.log(user) // {name: 'Sophia', age: 30, key with space: true, address: 'korea'}
+
+    // 수정
+    user.age = 20
+    console.log(user.age) // 20
+
+    // 삭제
+    delete user.address
+    console.log(user) // {name: 'Sophia', age: 20, key with space: true}
+
+    // in 연산자
+    console.log('age' in user) // true
+    console.log('country' in user) // false
+
+    // 단축 프로퍼티
+    const age = 30
+    const address = 'korea'
+
+    const oldUser = {
+      age: age,
+      address: address,
+    }
+
+    const newUser = {
+      age,
+      address,
+    }
+
+    // 계산된 프로퍼티
+    const product = prompt('물건 이름을 입력해주세요')
+    const prefix = 'my'
+    const suffix = 'property'
+
+    const bag = {
+      [product]: 5,
+      [prefix + suffix]: 'value',
+    }
+
+    console.log(bag) // {연필: 5, myproperty: 'value'}
+
+    // 객체와 함수
+    const person = {
+      name: 'Sophia',
+      greeting: function () {
+        return `Hello my name is ${this.name}`
+      },
+    }
+
+    // greeting 메서드 호출
+    console.log(person.greeting()) // Hello my name is Sophia
+
+
+    // 추가
+    const profile = {
+      name: 'Sophia',
+      age: 30,
+    }
+
+    console.log(Object.keys(profile)) // ['name', 'age']
+    console.log(Object.values(profile)) // ['Sophia', 30]
+  </script>
+</body>
+
+</html>

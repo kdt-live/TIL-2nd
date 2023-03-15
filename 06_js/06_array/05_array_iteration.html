@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const chars = ['a', 'b', 'c', 'd']
+
+    // for loop
+    for (let idx = 0; idx < chars.length; idx++) {
+      console.log(idx, chars[idx])
+    }
+
+    // for...of
+    for (const char of chars) {
+      console.log(char)
+    }
+
+    // forEach
+    chars.forEach((char, idx) => {
+      console.log(idx, char)
+    })
+
+
+    // 비동기 예시
+    console.log('a')
+
+    setTimeout(() => {
+      console.log('b')
+    }, 3000)
+
+    console.log('c')
+
+    // a
+    // c
+    // b
+
+  </script>
+</body>
+
+</html>

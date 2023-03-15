@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1.1 단순 호출
+    const myFunc = function () {
+      return this
+    }
+    console.log(myFunc()) // window
+
+    // 1.2 메서드 호출
+    const myObj = {
+      data: 1,
+      myFunc: function () {
+        return this
+      }
+    }
+    console.log(myObj.myFunc()) // myObj
+
+    // 2. Nested
+    // 2.1 일반 함수
+    const myObj2 = {
+      numbers: [1, 2, 3],
+      myFunc: function () {
+        this.numbers.forEach(function (number) {
+          console.log(number) // 1 2 3
+          console.log(this) // window
+        })
+      }
+    }
+    console.log(myObj2.myFunc())
+
+    // 2.1 화살표 함수
+    const myObj3 = {
+      numbers: [1, 2, 3],
+      myFunc: function () {
+        this.numbers.forEach((number) => {
+          console.log(number) // 1 2 3
+          console.log(this) // myObj3
+        })
+      }
+    }
+    console.log(myObj3.myFunc())
+
+  </script>
+</body>
+
+</html>

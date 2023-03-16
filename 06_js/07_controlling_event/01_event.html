@@ -12,6 +12,19 @@
   <button id="btn">버튼</button>
 
   <script>
+    // 1. 버튼 선택
+    const btn = document.querySelector('#btn')
+    console.log(btn)
+
+    // 2. 버튼에 이벤트 핸들러를 부착
+    btn.addEventListener('click', (event) => {
+      // 이벤트 객체
+      console.log(event)
+
+      // 이벤트가 발생한 대상
+      // console.log(this) // 화살표 함수에서는 window
+      console.log(event.target)
+    })
   </script>
 </body>
 

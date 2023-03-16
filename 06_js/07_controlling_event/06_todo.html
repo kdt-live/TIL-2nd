@@ -14,6 +14,43 @@
   <ul></ul>
 
   <script>
+    // 1. 필요한 요소 모두 선택
+    const inputTag = document.querySelector('.input-text')
+    const btn = document.querySelector('#btn')
+    const ulTag = document.querySelector('ul')
+
+    const addTodo = (event) => {
+      // 2.1 사용자 입력 데이터 저장
+      const inputData = inputTag.value
+      console.log(inputData)
+
+      // 2.6 사용자 입력 데이터 공백 제거 후 확인
+      if (inputData.trim()) {
+        // 2.2 데이터를 저장할 li 요소를 생성
+        const liTag = document.createElement('li')
+  
+        // 2.3 li 요소 컨텐츠에 데이터 입력
+        liTag.textContent = inputData
+        console.log(liTag)
+  
+        // 2.4 li 요소를 부모 ul 요소의 자식 요소로 추가
+        ulTag.appendChild(liTag)
+  
+        // 2.5 todo 추가 후 input의 입력 데이터는 초기화
+        inputTag.value = ''
+      } else {
+        // 2.7 사용자 입력 데이터가 없을 때
+        alert('할 일을 입력하세요..')
+      }
+    }
+
+    // 2. 버튼에 이벤트 핸들러를 부착
+    btn.addEventListener('click', addTodo)
+    
+
+
+
+
   </script>
 
 </body>

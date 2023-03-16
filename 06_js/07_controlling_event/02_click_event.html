@@ -13,6 +13,24 @@
   <p id="counter">0</p>
 
   <script>
+    // 0. 초기값 할당 (0)
+    let counterNumber = 0
+    
+    // 1. 버튼 요소 선택
+    const btn = document.querySelector('#btn')
+    
+    // 2. 버튼에 이벤트 핸들러 부착 (클릭 이벤트)
+    btn.addEventListener('click', () => {
+      // 2.1 버튼에 클릭 이벤트가 발생할때마다 실행할 코드를 작성
+      // 2.2 초기값 += 1
+      counterNumber += 1
+
+      // 2.3 p 요소를 선택
+      const pTag = document.querySelector('#counter')
+
+      // 2.4 p 요소의 컨텐츠를 1 증가한 초기값으로 설정
+      pTag.textContent = counterNumber
+    })
   </script>
 </body>
 

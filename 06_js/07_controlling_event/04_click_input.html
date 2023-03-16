@@ -20,6 +20,33 @@
   <input type="text" id="text-input">
 
   <script>
+    // 인풋
+    const inputTag = document.querySelector('#text-input')
+    const h1Tag = document.querySelector('h1')
+
+    inputTag.addEventListener('input', (event) => {
+      h1Tag.textContent = event.target.value
+    })
+
+    // 버튼
+    const btn = document.querySelector('#btn')
+
+    btn.addEventListener('click', () => {
+      // console.log(h1Tag.classList.value)
+      // h1Tag.classList.add('blue')
+
+      // 1. toggle 방법
+      h1Tag.classList.toggle('blue')
+
+      // 2. if 방법
+      // if (h1Tag.classList.value) {
+      //   h1Tag.classList.remove('blue')
+      // } else {
+      //   h1Tag.classList.add('blue')
+      // }
+    })
+
+
   </script>
 
 </body>

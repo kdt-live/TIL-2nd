@@ -12,6 +12,13 @@
   <h1>정말 중요한 내용</h1>
 
   <script>
+    const h1Tag = document.querySelector('h1')
+
+    h1Tag.addEventListener('copy', (event) => {
+      console.log(event)
+      event.preventDefault()
+      alert('복사 할 수 없습니다.')
+    })
   </script>
 </body>
 

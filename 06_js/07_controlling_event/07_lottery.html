@@ -13,7 +13,41 @@
   <button id="btn">행운 번호 받기</button>
   <div></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script>
+    // 1. 필요한 모든 요소 선택
+    const h1Tag = document.querySelector('h1')
+    const btn = document.querySelector('#btn')
+    const divTag = document.querySelector('div')
+
+    // 2. 버튼 요소에 이벤트 핸들러를 부착
+    btn.addEventListener('click', (event) => {
+      // 2.1 1부터 45까지의 값이 필요
+      const numbers = _.range(1, 46)
+      // console.log(numbers)
+
+      // 2.2 45개의 요소가 있는 배열에서 6개 번호 추출
+      const sixNumbers = _.sampleSize(numbers, 6)
+      // console.log(sixNumbers)
+
+      // 2.5 6개의 li 요소를 담을 ul 요소 생성
+      const ulTag = document.createElement('ul')
+
+      // 2.3 추출한 번호 배열을 "반복"하면서 li 요소를 생성
+      sixNumbers.forEach((number) => {
+        // 2.4 번호를 담을 li 요소 생성 후 입력
+        const liTag = document.createElement('li')
+        liTag.textContent = number
+        // console.log(liTag)
+        
+        // 2.6 만들어진 li를 ul 요소에 추가
+        ulTag.appendChild(liTag)
+      })
+      // console.log(ulTag)
+      // 2.7 완성한 ul 요소를 div 요소에 추가
+      divTag.appendChild(ulTag)
+    })
+
   </script>
 
 </body>

@@ -1,0 +1,19 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+  <h1>DTL 실습</h1>
+  <h3>메뉴판</h3>
+  <p>{{ foods }}</p>
+
+  <ul>
+    {% for food in foods %}
+      <li>{{ food }}</li>
+    {% endfor %}
+  </ul>
+
+  {% if foods|length == 0 %}
+    <p>메뉴가 남아있지 않습니다.</p>
+  {% else %}
+    <p>메뉴가 아직 남아있습니다.</p>
+  {% endif %}
+{% endblock content %}

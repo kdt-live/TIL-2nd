@@ -24,4 +24,8 @@ from articles import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', views.index),
+    path('dinner/', views.dinner),
+    path('search/', views.search),
+    path('throw/', views.throw),
+    path('catch/', views.catch),
 ]

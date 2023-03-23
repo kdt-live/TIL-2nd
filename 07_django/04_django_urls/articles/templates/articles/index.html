@@ -1,4 +1,4 @@
-{% extends 'articles/base.html' %}
+{% extends 'base.html' %}
 
 {% block style %}
   <style>
@@ -10,5 +10,8 @@
 
 {% block content %}
   <h1>Hello, {{ name }}!!</h1>
+  <a href="{% url 'articles:dinner' %}">dinner</a>
+  <a href="{% url 'articles:search' %}">search</a>
+  <a href="{% url 'articles:throw' %}">throw</a>
+  <a href="{% url 'pages:index' %}">두번째 앱의 메인 페이지로!</a>
 {% endblock content %}
-

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # 앱 등록 권장 순서
     # 1. local app
     'articles',
+    'pages',
     # 2. 3rd party app (설치를 통해 추가하는 앱)
     # 3. 기본 django app
     'django.contrib.admin',
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'firstpjt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit</h1>
+  <form action="{% url 'articles:update' article.pk %}" method="POST">
+    {% csrf_token %}
+    <div>
+      <label for="title">제목: </label>
+      <input type="text" name="title" id="title" value="{{ article.title }}">
+    </div>
+    <div>
+      <label for="content">내용: </label>
+      <textarea name="content" id="content" cols="30" rows="10">{{ article.content }}</textarea>
+    </div>
+    <input type="submit" value="[UPDATE]">
+  </form>
+  <a href="{% url 'articles:index' %}">[back]</a>
+</body>
+</html>

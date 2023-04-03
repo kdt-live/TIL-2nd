@@ -10,14 +10,7 @@
   <h1>New</h1>
   <form action="{% url 'articles:create' %}" method="POST">
     {% csrf_token %}
-    <div>
-      <label for="title">제목: </label>
-      <input type="text" name="title" id="title">
-    </div>
-    <div>
-      <label for="content">내용: </label>
-      <textarea name="content" id="content" cols="30" rows="10"></textarea>
-    </div>
+    {{ form.as_p }}
     <input type="submit">
   </form>
   <a href="{% url 'articles:index' %}">[back]</a>

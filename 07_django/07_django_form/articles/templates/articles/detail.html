@@ -17,7 +17,7 @@
     {% csrf_token %}
     <input type="submit" value="삭제">
   </form>
-  <a href="{% url 'articles:edit' article.pk %}">[EDIT]</a>
+  <a href="{% url 'articles:update' article.pk %}">[UPDATE]</a>
   <a href="{% url 'articles:index' %}">[back]</a>
 </body>
 </html>

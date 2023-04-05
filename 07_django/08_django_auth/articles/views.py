@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Article
 from .forms import ArticleForm
 
@@ -25,38 +26,13 @@ def detail(request, pk):
     return render(request, 'articles/detail.html', context)
 
 
-# def new(request):
-#     form = ArticleForm()
-#     context = {
-#         'form': form,
-#     }
-#     return render(request, 'articles/new.html', context)
-
-
-# def create(request):
-    # title = request.POST.get('title')
-    # content = request.POST.get('content')
-    # article = Article(title=title, content=content)
-    # article.save()
-
-    # form = ArticleForm(request.POST)
-    # if form.is_valid():
-    #     article = form.save()
-    #     return redirect('articles:detail', article.pk)
-    # context = {
-    #     'form': form,
-    # }
-    # return render(request, 'articles/new.html', context)
-
-
+@login_required
 def create(request):
-    # HTTP requests method가 POST라면
     if request.method == 'POST':
         form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save()
             return redirect('articles:detail', article.pk)
-    # POST가 아니라면
     else:
         form = ArticleForm()
     context = {
@@ -65,8 +41,7 @@ def create(request):
     return render(request, 'articles/new.html', context)
 
 
-
-
+@login_required
 def delete(request, artilce_pk):
     # 삭제할 데이터 조회
     article = Article.objects.get(pk=artilce_pk)
@@ -78,35 +53,7 @@ def delete(request, artilce_pk):
     return redirect('articles:index')
 
 
-# def edit(request, article_pk):
-#     article = Article.objects.get(pk=article_pk)
-#     form = ArticleForm(instance=article)
-#     context = {
-#         'article': article,
-#         'form': form,
-#     }
-#     return render(request, 'articles/edit.html', context)
-
-
-# def update(request, article_pk):
-    # title = request.POST.get('title')
-    # content = request.POST.get('content')
-    # article.title = title
-    # article.content = content
-    # article.save()
-
-    # article = Article.objects.get(pk=article_pk)
-    # form = ArticleForm(request.POST, instance=article)
-    # if form.is_valid():
-    #     form.save()
-    #     return redirect('articles:detail', article.pk)
-    # context = {
-    #     'article': article,
-    #     'form': form,
-    # }
-    # return render(request, 'articles/edit.html', context)
-
-
+@login_required
 def update(request, article_pk):
     article = Article.objects.get(pk=article_pk)
     if request.method == 'POST':

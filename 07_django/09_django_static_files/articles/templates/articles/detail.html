@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,12 @@
   <title>Document</title>
 </head>
 <body>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="IMAGE">
+  {% else %}
+    <img src="{% static 'articles/no-image.png' %}" alt="no-img">
+  {% endif %}
+
   <h1>Detail</h1>
   <p>글 번호: {{ article.pk }}</p>
   <p>제목: {{ article.title }}</p>

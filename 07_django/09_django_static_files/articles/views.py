@@ -22,7 +22,8 @@ def detail(request, pk):
 
 def create(request):
     if request.method == 'POST':
-        form = ArticleForm(request.POST)
+        # print(request.FILES)
+        form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             article = form.save()
             return redirect('articles:detail', article.pk)
@@ -43,7 +44,7 @@ def delete(request, artilce_pk):
 def update(request, article_pk):
     article = Article.objects.get(pk=article_pk)
     if request.method == 'POST':
-        form = ArticleForm(request.POST, instance=article)
+        form = ArticleForm(request.POST, request.FILES, instance=article)
         if form.is_valid():
             form.save()
             return redirect('articles:detail', article.pk)

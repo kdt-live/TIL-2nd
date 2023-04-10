@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Update</h1>
-  <form action="{% url 'articles:update' article.pk %}" method="POST">
+  <form action="{% url 'articles:update' article.pk %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="UPDATE">

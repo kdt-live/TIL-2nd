@@ -28,6 +28,7 @@
   <a href="{% url 'articles:create' %}">[CREATE]</a>
 
   {% for article in articles %}
+    <p>작성자: {{ article.user }}</p>
     <p>제목: 
       <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
     </p>

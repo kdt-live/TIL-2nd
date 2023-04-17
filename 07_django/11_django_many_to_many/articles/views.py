@@ -94,3 +94,35 @@ def comment_delete(request, article_pk, comment_pk):
     if request.user == comment.user:
         comment.delete()
     return redirect('articles:detail', article_pk)
+
+
+def likes(request, article_pk):
+    # 좋아요를 누르는 대상 게시글
+    article = Article.objects.get(pk=article_pk)
+
+    # 좋아요 관계를 추가 or 삭제
+    # case1. 현재 좋아요를 요청하는 유저가 해당 게시글의 좋아요를 누른 유저 목록에 있는지 없는지를 확인
+    if request.user in article.like_users.all():
+    # case2. 해당 게시글의 좋아요를 누른 유저에서 현재 요청하는 유저의 존재를 조회
+    # if article.like_users.filter(pk=request.user.pk).exists():
+        # 좋아요 취소
+        article.like_users.remove(request.user)
+        # request.user.like_articles.remove(article)
+    else:
+        # 좋아요 추가
+        article.like_users.add(request.user)
+        # request.user.like_articles.add(article)
+    return redirect('articles:index')
+
+
+
+
+
+    # 한번 누르면 추가, 두번 누르면 삭제 -> 3번쨰부터는??
+    # 체크박스? 좋아요를 누를때 체크박스?? -> 하트
+    # 게시글에 좋아요를 누른 모든 유저
+    article.like_users.all()
+    # 지금 좋아요를 요청하는 유저가 저 유저 목록에 있는지 없는지??
+
+    # 목록에 있으면? => 좋아요 취소
+    # 목록에 없으면? => 좋아요 추가

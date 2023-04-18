@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <button>야옹이 버튼</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const catImageSearchURL = 'https://api.thecatapi.com/v1/images/search'
+    const btn = document.querySelector('button')
+
+    btn.addEventListener('click', function () {
+      axios({
+        method: 'get',
+        url: catImageSearchURL,
+      })
+        .then((response) => {
+          imgElem = document.createElement('img')
+          imgElem.setAttribute('src', response.data[0].url)
+          document.body.appendChild(imgElem)
+        })
+        .catch((error) => {
+          console.log('실패했다옹')
+        })
+    })
+  </script>
+</body>
+
+</html>

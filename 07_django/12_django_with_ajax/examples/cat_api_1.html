@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    console.log('고양이는 야옹')
+    const catImageSearchURL = 'https://api.thecatapi.com/v1/images/search'
+
+    axios({
+      method: 'get',
+      url: catImageSearchURL,
+    })
+      .then((response) => {
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log('실패했다옹')
+      })
+    console.log('야옹야옹')
+  </script>
+</body>
+
+</html>

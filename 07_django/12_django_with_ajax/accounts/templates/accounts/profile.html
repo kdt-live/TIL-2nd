@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{ person.username }}의 프로필 페이지</h1>
+
+  <div>
+    팔로잉 : {{ person.followings.all|length }} / 팔로워 : {{ person.followers.all|length }}
+  </div>
+
+  {% if request.user != person %}
+    <div>
+      <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+        {% csrf_token %}
+        {% if request.user in person.followers.all %}
+          <input type="submit" value="언팔로우">
+        {% else %}
+          <input type="submit" value="팔로우">
+        {% endif %}
+      </form>
+    </div>
+  {% endif %}
+
+  <h3>{{ person.username }}가 작성한 모든 게시글</h3>
+  {% for article in person.article_set.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <hr>
+
+  <h3>{{ person.username }}가 작성한 모든 댓글</h3>
+  {% for comment in person.comment_set.all %}
+    <div>{{ comment.content }}</div>
+  {% endfor %}
+
+  <hr>
+  
+  <h3>{{ person.username }}가 좋아요를 누른 모든 게시글</h3>
+  {% for article in person.like_articles.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+</body>
+</html>

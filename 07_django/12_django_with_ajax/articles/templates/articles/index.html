@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% if request.user.is_authenticated %}
+    <h3>안녕하세요, {{ user }} 님!</h3>
+    <a href="{% url 'accounts:profile' user.username %}">내 프로필</a>
+    <form action="{% url 'accounts:logout' %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Logout">
+    </form>
+    <form action="{% url 'accounts:delete' %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="회원탈퇴">
+    </form>
+    <a href="{% url 'accounts:update' %}">회원정보수정</a>
+  {% else %}
+    <a href="{% url 'accounts:login' %}">Login</a>
+    <a href="{% url 'accounts:signup' %}">Signup</a>
+  {% endif %}
+
+  <h1>Articles</h1>
+
+  <a href="{% url 'articles:create' %}">[CREATE]</a>
+
+  {% for article in articles %}
+    <p>작성자: 
+      <a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>
+    </p>
+    <p>제목: 
+      <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    </p>
+    <p>내용: {{ article.content }}</p>
+    <form action="{% url 'articles:likes' article.pk %}" method="POST">
+      {% csrf_token %}
+      {% if request.user in article.like_users.all %}
+        <input type="submit" value="좋아요 취소">
+      {% else %}
+        <input type="submit" value="좋아요">
+      {% endif %}
+    </form>
+    <hr>
+  {% endfor %}
+</body>
+</html>

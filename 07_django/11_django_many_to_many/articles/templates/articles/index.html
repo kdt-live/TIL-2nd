@@ -9,6 +9,7 @@
 <body>
   {% if request.user.is_authenticated %}
     <h3>안녕하세요, {{ user }} 님!</h3>
+    <a href="{% url 'accounts:profile' user.username %}">내 프로필</a>
     <form action="{% url 'accounts:logout' %}" method="POST">
       {% csrf_token %}
       <input type="submit" value="Logout">
@@ -28,7 +29,9 @@
   <a href="{% url 'articles:create' %}">[CREATE]</a>
 
   {% for article in articles %}
-    <p>작성자: {{ article.user }}</p>
+    <p>작성자: 
+      <a href="{% url 'accounts:profile' article.user.username %}">{{ article.user }}</a>
+    </p>
     <p>제목: 
       <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
     </p>

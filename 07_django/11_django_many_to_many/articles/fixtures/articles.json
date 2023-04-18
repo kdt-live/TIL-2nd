@@ -1,0 +1,44 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "title": "제목",
+        "content": "내용!!!!",
+        "created_at": "2023-04-17T02:47:32.011Z",
+        "updated_at": "2023-04-17T02:47:32.011Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "ㅈㅁㄴㅇㅁㄴㅇ",
+        "content": "ㅁㄴㅇㅁㄴㅇ",
+        "created_at": "2023-04-17T02:47:41.001Z",
+        "updated_at": "2023-04-17T02:47:41.001Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "title": "asdasd",
+        "content": "asdasd",
+        "created_at": "2023-04-18T02:01:42.153Z",
+        "updated_at": "2023-04-18T02:01:42.153Z",
+        "like_users": [
+            1
+        ]
+    }
+}
+]

@@ -1,0 +1,122 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 3,
+        "title": "TEST 1 TITLE",
+        "content": "Affect media sister offer itself.\nAdd teacher debate exactly. Nature difficult whether stand short glass son raise. Visit environment anything approach develop.",
+        "created_at": "2022-04-21T12:32:10.905Z",
+        "updated_at": "2022-04-21T12:32:10.905Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 5,
+        "title": "TEST 2 TITLE",
+        "content": "Idea hit wonder. Mr space follow.\nIndeed half skin sense possible together impact. Live bed break reflect pressure.",
+        "created_at": "2022-04-21T12:32:10.977Z",
+        "updated_at": "2022-04-21T12:32:10.977Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 3,
+    "fields": {
+        "user": 4,
+        "title": "TEST 3 TITLE",
+        "content": "Conference represent light cover hear eight I. Subject six style stay rate ability marriage.",
+        "created_at": "2022-04-21T12:32:11.050Z",
+        "updated_at": "2022-04-21T12:32:11.050Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "title": "TEST 4 TITLE",
+        "content": "Able live form. Young understand family listen though.\nPresent among born identify fast me up. Money at center here reduce media.",
+        "created_at": "2022-04-21T12:32:11.122Z",
+        "updated_at": "2022-04-21T12:32:11.122Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "title": "TEST 5 TITLE",
+        "content": "Health news that medical job late program. Staff recently product second cultural. Peace put if mind seven key own.\nWife way listen store tree herself company.",
+        "created_at": "2022-04-21T12:32:11.195Z",
+        "updated_at": "2022-04-21T12:32:11.195Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 6,
+    "fields": {
+        "user": 2,
+        "title": "TEST 6 TITLE",
+        "content": "Read represent source want art century quite. Say buy owner research.\nOffer goal religious. Table audience chance exactly cultural. Under budget individual open. Run sister high huge view.",
+        "created_at": "2022-04-21T12:32:11.267Z",
+        "updated_at": "2022-04-21T12:32:11.267Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 7,
+    "fields": {
+        "user": 5,
+        "title": "TEST 7 TITLE",
+        "content": "Newspaper position establish establish later team drop enter. Fly wish benefit middle Congress interest final entire.",
+        "created_at": "2022-04-21T12:32:11.338Z",
+        "updated_at": "2022-04-21T12:32:11.338Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 8,
+    "fields": {
+        "user": 1,
+        "title": "TEST 8 TITLE",
+        "content": "Them pay control on sort. Whether tree sister door prove unit. Success business treat beat find place.\nMaybe number notice. Defense important appear field far.",
+        "created_at": "2022-04-21T12:32:11.410Z",
+        "updated_at": "2022-04-21T12:32:11.410Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 9,
+    "fields": {
+        "user": 1,
+        "title": "TEST 9 TITLE",
+        "content": "Kind sometimes open right section will heart. Tend four its big guy threat.\nLaugh write five politics. Seem letter tax anything north face wait.",
+        "created_at": "2022-04-21T12:32:11.482Z",
+        "updated_at": "2022-04-21T12:32:11.482Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 10,
+    "fields": {
+        "user": 5,
+        "title": "TEST 10 TITLE",
+        "content": "Right social college dinner education short practice news. Pass finish method party.",
+        "created_at": "2022-04-21T12:32:11.553Z",
+        "updated_at": "2022-04-21T12:32:11.553Z",
+        "like_users": []
+    }
+}
+]

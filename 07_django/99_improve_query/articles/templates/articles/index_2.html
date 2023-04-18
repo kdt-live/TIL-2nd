@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Articles</h1>
+{% for article in articles %}
+  <h3>작성자 : {{ article.user.username }}</h3>
+  <p>제목 : {{ article.title }}</p>
+  <hr>
+{% endfor %}
+{% endblock content %}
+

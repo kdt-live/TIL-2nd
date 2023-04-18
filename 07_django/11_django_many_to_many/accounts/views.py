@@ -93,3 +93,24 @@ def profile(request, username):
         'person': person,
     }
     return render(request, 'accounts/profile.html', context)
+
+
+@login_required
+def follow(request, user_pk):
+    # 팔로우를 할 대상이 필요
+    User = get_user_model()
+    you = User.objects.get(pk=user_pk)
+    me = request.user
+
+    # 나 자신은 팔로우 할 수 없음
+    if you != me:
+        # 팔로우 or 언팔로우
+        if me in you.followers.all():
+            # 언팔로우
+            you.followers.remove(me)
+            # me.follwings.remove(you)
+        else:
+            # 팔로우
+            you.followers.add(me)
+            # me.followings.add(you)
+    return redirect('accounts:profile', you.username)

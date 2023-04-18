@@ -9,6 +9,23 @@
 <body>
   <h1>{{ person.username }}의 프로필 페이지</h1>
 
+  <div>
+    팔로잉 : {{ person.followings.all|length }} / 팔로워 : {{ person.followers.all|length }}
+  </div>
+
+  {% if request.user != person %}
+    <div>
+      <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+        {% csrf_token %}
+        {% if request.user in person.followers.all %}
+          <input type="submit" value="언팔로우">
+        {% else %}
+          <input type="submit" value="팔로우">
+        {% endif %}
+      </form>
+    </div>
+  {% endif %}
+
   <h3>{{ person.username }}가 작성한 모든 게시글</h3>
   {% for article in person.article_set.all %}
     <div>{{ article.title }}</div>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<!-- index_1.html -->
+
+{% block content %}
+  <h1>Articles</h1>
+  {% for article in articles %}
+    <p>제목 : {{ article.title }}</p>
+    <p>댓글개수 : {{ article.comment_set.count }}</p>
+    {% comment %} <p>댓글개수 : {{ article.comment__count }}</p> {% endcomment %}
+    <hr>
+  {% endfor %}
+{% endblock content %}

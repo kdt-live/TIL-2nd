@@ -10,12 +10,13 @@
   <h1>{{ person.username }}의 프로필 페이지</h1>
 
   <div>
-    팔로잉 : {{ person.followings.all|length }} / 팔로워 : {{ person.followers.all|length }}
+    팔로잉 : <span id="followings-count">{{ person.followings.all|length }}</span> / 
+    팔로워 : <span id="followers-count">{{ person.followers.all|length }}</span>
   </div>
 
   {% if request.user != person %}
     <div>
-      <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+      <form id="follow-form" data-user-id="{{ person.pk }}">
         {% csrf_token %}
         {% if request.user in person.followers.all %}
           <input type="submit" value="언팔로우">
@@ -44,5 +45,49 @@
   {% for article in person.like_articles.all %}
     <div>{{ article.title }}</div>
   {% endfor %}
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const form = document.querySelector('#follow-form')
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+    form.addEventListener('submit', function (event) {
+      // 이벤트 기본 동작 취소
+      event.preventDefault()
+
+      // HTML로 부터 전달받은 프로필 유저의 PK
+      const userId = event.target.dataset.userId
+      
+      // axios로 요청 보내기
+      axios({
+        method: 'post',
+        url: `/accounts/${userId}/follow/`,
+        headers: {'X-CSRFToken': csrftoken},
+      })
+        .then((response) => {
+          // console.log(response.data)
+          const isFollowed = response.data.is_followed
+          const followBtn = document.querySelector('#follow-form > input[type=submit]')
+
+          // isFollowed에 따라 버튼을 조작
+          if (isFollowed === true) {
+            followBtn.value = '언팔로우'
+          } else {
+            followBtn.value = '팔로우'
+          }
+
+          // 팔로잉&팔로워 수 DOM 조작
+          const followingCountTag = document.querySelector('#followings-count')
+          const followerCountTag = document.querySelector('#followers-count')
+
+          const followingsCountData = response.data.followings_count
+          const followersCountData = response.data.followers_count
+
+          // 선택한 span 태그의 내용을 팔로잉과 팔로워 수 데이터로 채워넣기
+          followingCountTag.textContent = followingsCountData
+          followerCountTag.textContent = followersCountData
+        })
+    })
+  </script>
 </body>
 </html>

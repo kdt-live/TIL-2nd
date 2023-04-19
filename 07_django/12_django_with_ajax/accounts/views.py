@@ -93,6 +93,7 @@ def profile(request, username):
     }
     return render(request, 'accounts/profile.html', context)
 
+from django.http import JsonResponse
 
 @login_required
 def follow(request, user_pk):
@@ -103,6 +104,14 @@ def follow(request, user_pk):
     if you != me:
         if me in you.followers.all():
             you.followers.remove(me)
+            is_followed = False
         else:
             you.followers.add(me)
+            is_followed = True
+        context = {
+            'is_followed': is_followed,
+            'followings_count': you.followings.count(),
+            'followers_count': you.followers.count(),
+        }
+        return JsonResponse(context)
     return redirect('accounts:profile', you.username)

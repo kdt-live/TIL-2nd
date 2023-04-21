@@ -1,0 +1,202 @@
+[
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "article": 20,
+        "content": "Tonight free why name break. Fine receive become fear. Really break good executive something improve. Later month star now purpose loss with.",
+        "created_at": "1975-12-07T13:38:25Z",
+        "updated_at": "1991-01-16T06:45:10Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "article": 5,
+        "content": "Material apply memory believe. The similar alone huge room hair compare. Billion family kitchen miss drop manage each middle.",
+        "created_at": "1974-12-29T09:30:22Z",
+        "updated_at": "1982-10-28T04:46:17Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 3,
+    "fields": {
+        "article": 12,
+        "content": "Gun call again Mrs send sport. Get prepare decide.\nParent at sense which others present forget. Site lawyer act soon.\nOut grow less billion. Far real poor need. Majority job source relate page want.",
+        "created_at": "1974-10-03T11:40:21Z",
+        "updated_at": "1992-11-06T07:07:50Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 4,
+    "fields": {
+        "article": 15,
+        "content": "Stand decide hundred available direction. As job often head pattern risk physical. Population business ability between use know table.",
+        "created_at": "2019-07-19T07:39:37Z",
+        "updated_at": "1987-02-12T11:58:42Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 5,
+    "fields": {
+        "article": 18,
+        "content": "Market enjoy cup nature. Level generation nor word.\nSeek certainly person must city help. From and teacher campaign tax there.",
+        "created_at": "1983-09-07T04:59:39Z",
+        "updated_at": "2001-02-09T18:37:40Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 6,
+    "fields": {
+        "article": 17,
+        "content": "Discover lay forget fire no else. According maintain air fund president physical. Huge piece worker hundred.",
+        "created_at": "2000-04-26T13:11:18Z",
+        "updated_at": "2010-11-18T11:33:40Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 7,
+    "fields": {
+        "article": 4,
+        "content": "Yourself attention organization by realize coach. Production degree if around somebody field.\nFeeling yet dinner offer mouth summer. Republican oil institution available statement early material.",
+        "created_at": "2018-04-03T22:40:57Z",
+        "updated_at": "2001-03-07T02:26:20Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 8,
+    "fields": {
+        "article": 18,
+        "content": "Agree opportunity result. Could star cut. Experience station often east note.",
+        "created_at": "2007-04-14T17:20:01Z",
+        "updated_at": "2015-03-06T10:26:24Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 9,
+    "fields": {
+        "article": 7,
+        "content": "Keep environmental summer. Benefit control clear behind. Case down four hold. Prove even sell quite.",
+        "created_at": "1977-04-26T07:29:46Z",
+        "updated_at": "1999-12-18T14:36:41Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 10,
+    "fields": {
+        "article": 18,
+        "content": "Suffer term it born attack. Movie black matter marriage.\nCourt article close gun environment from. Machine forward language wall far thank entire. Cultural forward any be resource.",
+        "created_at": "1999-03-27T05:20:50Z",
+        "updated_at": "2004-02-27T01:20:41Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 11,
+    "fields": {
+        "article": 18,
+        "content": "Trial beyond ok admit.\nHit another serve hear whatever citizen threat. College commercial break listen light cell.\nAnswer too dark among send home. Choice add science measure store me.",
+        "created_at": "1998-07-11T09:19:57Z",
+        "updated_at": "2007-07-10T14:42:51Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 12,
+    "fields": {
+        "article": 10,
+        "content": "Concern religious region wife five family. Moment difference attack public sound.\nChange culture inside audience line. Way table democratic hour.",
+        "created_at": "2011-03-14T22:14:14Z",
+        "updated_at": "1970-05-02T08:14:12Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 13,
+    "fields": {
+        "article": 16,
+        "content": "Mind start indeed. Production fly herself character. House among between board old thing direction fine.\nEither contain police stock rather. Plant pass south money.",
+        "created_at": "2019-06-10T06:11:12Z",
+        "updated_at": "1997-04-21T19:11:22Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 14,
+    "fields": {
+        "article": 2,
+        "content": "Nothing keep yet hotel. Worry particularly simple top. Miss page tax share.\nSpecific his particular test would. Read information option add.",
+        "created_at": "2009-12-25T09:21:18Z",
+        "updated_at": "2021-04-09T12:09:15Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 15,
+    "fields": {
+        "article": 17,
+        "content": "Baby perform court political. Particularly lawyer ten.\nSouth help reduce scientist. Wide clearly answer central prepare quickly.",
+        "created_at": "1992-11-21T06:31:07Z",
+        "updated_at": "1977-09-05T05:18:09Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 16,
+    "fields": {
+        "article": 3,
+        "content": "Hospital home others how account road choose. Police measure friend ten only whether book.",
+        "created_at": "1987-05-30T06:55:24Z",
+        "updated_at": "1994-11-01T09:59:33Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 17,
+    "fields": {
+        "article": 3,
+        "content": "Woman effort manage. Attention traditional than soon. Reflect kid service break trial study too take.\nConference rule teach whether. Particular yourself nothing show economy season.",
+        "created_at": "2011-03-08T20:25:24Z",
+        "updated_at": "2016-02-03T15:59:03Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 18,
+    "fields": {
+        "article": 20,
+        "content": "Seek available meeting hour poor piece window risk.\nWhite kind politics particular down get. Themselves certain inside other. According week world raise.",
+        "created_at": "1988-08-29T08:40:01Z",
+        "updated_at": "2015-08-01T06:00:24Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 19,
+    "fields": {
+        "article": 20,
+        "content": "Number building consider discussion. Benefit cost effect everything anyone ground worker. Either go report. Economic situation public television while term.",
+        "created_at": "1975-09-22T12:44:30Z",
+        "updated_at": "1992-10-07T20:10:19Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 20,
+    "fields": {
+        "article": 17,
+        "content": "Discuss I key situation force lawyer message. Point plant organization fall. Agency reduce far environmental room land red.\nPretty Mr which budget.\nLine force catch third. Appear college start hand.",
+        "created_at": "1985-06-10T03:28:18Z",
+        "updated_at": "1984-02-27T17:14:14Z"
+    }
+}
+]
